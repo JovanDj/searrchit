@@ -40,7 +40,7 @@ searchForm.addEventListener("submit", e => {
         : "https://upload.wikimedia.org/wikipedia/fi/0/0e/Reddit_-_logo.png";
 
       output += `
-        <div class="card fade-in">
+        <div class="card">
           <img src="${image}" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title">${post.title}</h5>

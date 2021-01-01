@@ -1,12 +1,13 @@
 "use strict";
 
+import "bootswatch/dist/journal/bootstrap.min.css";
 import reddit from "./reddit-api";
 
 const searchForm = document.getElementById("search-form");
 const searchInput = document.getElementById("search-input");
 
 // Form Event Listener
-searchForm.addEventListener("submit", e => {
+searchForm.addEventListener("submit", (e) => {
   // Get search term
   const searchTerm = searchInput.value;
 
@@ -29,11 +30,11 @@ searchForm.addEventListener("submit", e => {
   // Show searched term
   showSearchTerm(searchTerm);
 
-  reddit.search(searchTerm, searchLimit, sortBy).then(results => {
+  reddit.search(searchTerm, searchLimit, sortBy).then((results) => {
     let output = '<div class="card-columns">';
     // Loop through posts
 
-    results.forEach(post => {
+    results.forEach((post) => {
       // Check for image
       let image = post.preview
         ? post.preview.images[0].source.url

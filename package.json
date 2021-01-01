@@ -5,8 +5,8 @@
   "description": "Reddit search app",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html",
-    "build": "npx parcel build index.html"
+    "dev": "parcel watch index.html",
+    "build": "npx parcel build --public-url ./ index.html"
   },
   "author": "Jovan Djukic",
   "license": "MIT",
